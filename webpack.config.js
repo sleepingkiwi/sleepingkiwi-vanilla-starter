@@ -411,8 +411,13 @@ module.exports = (env) => {
           // enable the file-loader config below if you enable this!
           exclude: [
             path.resolve(__dirname, 'src/static/icons'),
+            path.resolve(__dirname, 'src/static/root'),
           ],
           */
+          // exclude root
+          exclude: [
+            path.resolve(__dirname, 'src/static/root'),
+          ],
           use: [
             {
               loader: 'url-loader',
